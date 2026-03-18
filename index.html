@@ -8,24 +8,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
-        :root { --marine: #0A2540; }
-        .tail-container { font-family: 'Inter', system-ui, sans-serif; }
-        .hero-bg {
-            background-image: linear-gradient(rgba(10, 37, 64, 0.65), rgba(10, 37, 64, 0.65)), url('hero.png');
-            background-size: cover; background-position: center; background-attachment: fixed;
+        
+        :root {
+            --marine: #0A2540;
         }
-        .section-title { font-family: 'Playfair Display', serif; }
-        .nav-link { transition: all 0.3s ease; }
-        .nav-link:hover { color: #60A5FA; transform: translateY(-2px); }
-        .doctor-card { transition: all 0.4s ease; }
-        .doctor-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgb(10 37 64 / 0.25); }
-        .clinic-img { transition: transform 0.5s ease; }
-        .clinic-img:hover { transform: scale(1.03); }
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #60A5FA;
+            transform: translateY(-2px);
+        }
+        
+        .doctor-card {
+            transition: all 0.4s ease;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(10 37 64 / 0.25);
+        }
+        
+        .clinic-img {
+            transition: transform 0.5s ease;
+        }
+        
+        .clinic-img:hover {
+            transform: scale(1.03);
+        }
     </style>
 </head>
 <body class="tail-container text-gray-800 bg-white">
 
-    <!-- NAV (unchanged) -->
+    <!-- NAV -->
     <nav class="bg-[#0A2540] text-white sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
@@ -35,86 +60,118 @@
                     <span class="text-[#60A5FA] text-2xl font-bold">Fogszabályozás</span>
                 </div>
             </div>
+            
             <div class="hidden md:flex gap-8 text-sm font-medium">
                 <a href="#kezdolap" class="nav-link">KEZDŐLAP</a>
                 <a href="#allcsont" class="nav-link">ÁLLCSONT-ORTOPÉDIA</a>
                 <a href="#orvosaink" class="nav-link">ORVOSAINK</a>
                 <a href="#kapcsolat" class="nav-link">KAPCSOLAT</a>
             </div>
-            <a href="#kapcsolat" class="bg-[#60A5FA] hover:bg-[#3B82F6] text-white px-6 py-3 rounded-full font-medium text-sm transition flex items-center gap-2">
-                <i class="fa-solid fa-calendar"></i> BEJELENTKEZÉS
+            
+            <a href="#kapcsolat" 
+               class="bg-[#60A5FA] hover:bg-[#3B82F6] text-white px-6 py-3 rounded-full font-medium text-sm transition flex items-center gap-2">
+                <i class="fa-solid fa-calendar"></i>
+                BEJELENTKEZÉS
             </a>
         </div>
     </nav>
 
-    <!-- HERO (unchanged) -->
-    <header class="hero-bg h-screen flex items-center text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 section-title">Üdvözöljük a Városmajori<br>Fogszabályozásnál</h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-95">Gyermek- és felnőttkori fogszabályozás • Állcsont-ortopédia • Dento-alveoláris sebészet<br><span class="text-[#60A5FA]">Buda szívében • Széll Kálmán tér közelében</span></p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#orvosaink" class="bg-white text-[#0A2540] px-10 py-4 rounded-full font-semibold text-lg hover:bg-[#F1F5F9] transition inline-flex items-center gap-3">Ismerje meg orvosainkat <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#kapcsolat" class="border-2 border-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#0A2540] transition">Kapcsolat & Bejelentkezés</a>
+    <!-- HERO – now with visible hero.png on top of the title (as requested) -->
+    <header class="bg-gradient-to-b from-[#0A2540] to-[#1E3A5F] text-white py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8 section-title">
+                Üdvözöljük a Városmajori<br>Fogszabályozásnál
+            </h1>
+            
+            <!-- HERO.png now clearly visible and centered above the subtitle -->
+            <img src="hero.png" alt="Család mosollyal" 
+                 class="mx-auto mb-10 rounded-3xl shadow-2xl max-w-4xl w-full object-cover">
+            
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto opacity-95">
+                Gyermek- és felnőttkori fogszabályozás • Állcsont-ortopédia • Dento-alveoláris sebészet<br>
+                <span class="text-[#60A5FA]">Buda szívében • Széll Kálmán tér közelében</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+                <a href="#orvosaink" 
+                   class="bg-white text-[#0A2540] px-10 py-4 rounded-full font-semibold text-lg hover:bg-[#F1F5F9] transition inline-flex items-center gap-3">
+                    Ismerje meg orvosainkat
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#kapcsolat" 
+                   class="border-2 border-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#0A2540] transition">
+                    Kapcsolat & Bejelentkezés
+                </a>
             </div>
         </div>
     </header>
 
     <!-- KEZDŐLAP (unchanged) -->
     <section id="kezdolap" class="max-w-5xl mx-auto px-6 py-24">
-        <!-- same as before -->
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-1 bg-[#0A2540]/10 text-[#0A2540] text-xs font-semibold rounded-full mb-4">VÁROSMAJORI FOGSZABÁLYOZÁS</span>
+            <h2 class="text-4xl font-bold section-title text-[#0A2540]">Köszöntjük honlapunkon!</h2>
+        </div>
+        
         <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
             <p>Köszöntjük a Városmajori Fogszabályozás honlapján!</p>
             <p>Fogszabályozó rendelőnk Buda központi részén, a Déli pályaudvar és a Széll Kálmán tér szomszédságában helyezkedik el, a 1122 Budapest, Városmajor u. 47/b szám alatt.</p>
             <p>Rendelőnkben gyermek- és felnőttkori fogszabályozással, továbbá egyéb állcsontortopédiai eltérésekkel foglalkozunk. Némely eltérés kezelésében szükséges lehet dento-alveoláris sebészeti beavatkozás is, mely rendelőnkben szintén elérhető.</p>
-            <p>Szakorvosaink a gyermekek nyelvén jól értő, nyitott, kedves és türelmes orvosok...</p>
-            <p>Rendelőnkben újszülött-kortól várjuk a kis betegeket...</p>
+            <p>Szakorvosaink a gyermekek nyelvén jól értő, nyitott, kedves és türelmes orvosok, akik jól tudják, hogy a kis betegek együttműködése a kölcsönös bizalmon alapul.</p>
+            <p>Rendelőnkben újszülött-kortól várjuk a kis betegeket, hogy közösen megtaláljuk a legmegfelelőbb kezelési tervet állcsontortopédiai rendellenességükre!</p>
             <p class="font-medium text-[#0A2540]">Bejelentkezés a Kapcsolat menüpontban található elérhetőségeken!</p>
         </div>
     </section>
 
-    <!-- ÁLLCSONT-ORTOPÉDIA – NOW 100% FULL TEXT -->
+    <!-- ÁLLCSONT-ORTOPÉDIA – NEW LAYOUT (centered title + big centered photo + full-width text) -->
     <section id="allcsont" class="bg-[#F8FAFC] py-24">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div>
-                    <img src="interior.png" alt="Modern rendelőnk" class="clinic-img rounded-3xl shadow-2xl w-full">
+            
+            <!-- Centered title -->
+            <div class="text-center mb-12">
+                <span class="text-[#60A5FA] font-semibold text-sm tracking-widest">SZAKÉRTŐ ELLÁTÁS</span>
+                <h2 class="text-4xl font-bold section-title text-[#0A2540] mt-3">Állcsont-ortopédia</h2>
+            </div>
+            
+            <!-- Big centered photo -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <img src="interior.png" alt="Modern rendelőnk" 
+                     class="clinic-img mx-auto rounded-3xl shadow-2xl w-full">
+            </div>
+            
+            <!-- Full-width text (adapts automatically if text becomes shorter) -->
+            <div class="prose prose-lg max-w-4xl mx-auto text-gray-700 leading-relaxed">
+                <p><strong>dr. Illés Emil</strong> vagyok, a Heim Pál Országos Gyermekgyógyászati Intézet Állcsontortopédiai és Fogszabályozási Osztályának gyermek-dento-alveoláris sebésze és a Városmajori Fogszabályozási Rendelő Szakmai Vezetője.</p>
+                
+                <p>Munkatársaimmal együttműködésben évente legalább ötven olyan állcsontortopédiai esettel találkozunk, ahol az nem zajlik le a fog áttörése az elvárt életkorban. A szülők azzal a panasszal jelentkeznek klinikán, hogy a gyermeknek még mindig nem nőtt ki a maradó foga. Természetesen, mivel minden gyermek testi fejlődése egyéni, az áttörés elmaradásának észlelésekor elsősorban türelemre intjük a szülőket, mindazonáltal megvizsgáljuk, van-e a betegünk csontozatában, anatómiai és genetikai adottságaiban olyan ok, mely valószínűsítheti a fogáttörés lezajlásának teljes elmaradását.</p>
+                
+                <p>Szájsebészként az a feladatom ezekben az esetekben, hogy az áttörésben visszamaradt fogakat műtéti úton felszabadítsam, hogy fogszabályozó szakorvosaink a fogszabályozási terv részeként azokat végleges helyükre pozicionálják. PHD kutatásomban azt vizsgálom, hogy retineált és impaktált fogak esetében mi lenne a legideálisabb időpont a fog műtéti feltárása szempontjából.</p>
+                
+                <p>A jelenlegi statisztika azt mutatja, hogy a népesség 0,8-3,6%-ánál diagnosztizálhatóak fogáttörési rendellenességek, fontosnak tartom foglalkozni azzal, hogyan tudjuk a legeredményesebben megoldani az áttörésben visszamaradt fogak megfelelő helyre történő pozicionálását úgy, hogy a csontosodás, a gyökércsatornák egészsége és a ginigva állapota is kielégítő legyen hosszú távon is. Egy 2009-es statisztika szerint az áttörésben visszamaradt fogak leggyakrabban az alsó és felső harmadik nagyőrlőfogak.</p>
+                
+                <p>Bár sok szempontból nagyon hasonlóak az impaktált és a retineált fogak áttörésének akadályai, retineált fogként azt a fogat említjük, amely már kifejlődött, azonban nem képes az állcsontból előtörni, mindemellett nincs látható, fizikai akadálya. Impaktált fog esetében viszont egyértelműen meghatározható a fog visszamaradásának oka (helyhiány, gyulladás, számfeletti fog, stb). Impaktáltnak azokat a fogakat tekintjük, amelyek az állcsontban maradnak az elvárt áttörési életkort követő két éven túl is.</p>
+                
+                <div class="my-10 bg-white p-8 rounded-2xl border border-gray-100">
+                    <h4 class="font-semibold mb-6 text-[#0A2540]">Mikor érdemes orvoshoz fordulni?</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                        <li class="flex gap-3 mt-8"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Krónikus gyulladásos betegségek esetén</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Artikulációs és táplálkozási nehézségek esetén</li>
+                    </ul>
                 </div>
-                <div class="prose prose-lg text-gray-700 leading-relaxed">
-                    <span class="text-[#60A5FA] font-semibold text-sm tracking-widest">SZAKÉRTŐ ELLÁTÁS</span>
-                    <h2 class="text-4xl font-bold section-title text-[#0A2540] mt-3 mb-8">Állcsont-ortopédia</h2>
-                    
-                    <p><strong>dr. Illés Emil</strong> vagyok, a Heim Pál Országos Gyermekgyógyászati Intézet Állcsontortopédiai és Fogszabályozási Osztályának gyermek-dento-alveoláris sebésze és a Városmajori Fogszabályozási Rendelő Szakmai Vezetője.</p>
-                    
-                    <p>Munkatársaimmal együttműködésben évente legalább ötven olyan állcsontortopédiai esettel találkozunk, ahol az nem zajlik le a fog áttörése az elvárt életkorban. A szülők azzal a panasszal jelentkeznek klinikán, hogy a gyermeknek még mindig nem nőtt ki a maradó foga. Természetesen, mivel minden gyermek testi fejlődése egyéni, az áttörés elmaradásának észlelésekor elsősorban türelemre intjük a szülőket, mindazonáltal megvizsgáljuk, van-e a betegünk csontozatában, anatómiai és genetikai adottságaiban olyan ok, mely valószínűsítheti a fogáttörés lezajlásának teljes elmaradását.</p>
-                    
-                    <p>Szájsebészként az a feladatom ezekben az esetekben, hogy az áttörésben visszamaradt fogakat műtéti úton felszabadítsam, hogy fogszabályozó szakorvosaink a fogszabályozási terv részeként azokat végleges helyükre pozicionálják. PHD kutatásomban azt vizsgálom, hogy retineált és impaktált fogak esetében mi lenne a legideálisabb időpont a fog műtéti feltárása szempontjából.</p>
-                    
-                    <p>A jelenlegi statisztika azt mutatja, hogy a népesség 0,8-3,6%-ánál diagnosztizálhatóak fogáttörési rendellenességek, fontosnak tartom foglalkozni azzal, hogyan tudjuk a legeredményesebben megoldani az áttörésben visszamaradt fogak megfelelő helyre történő pozicionálását úgy, hogy a csontosodás, a gyökércsatornák egészsége és a ginigva állapota is kielégítő legyen hosszú távon is. Egy 2009-es statisztika szerint az áttörésben visszamaradt fogak leggyakrabban az alsó és felső harmadik nagyőrlőfogak.</p>
-                    
-                    <p>Bár sok szempontból nagyon hasonlóak az impaktált és a retineált fogak áttörésének akadályai, retineált fogként azt a fogat említjük, amely már kifejlődött, azonban nem képes az állcsontból előtörni, mindemellett nincs látható, fizikai akadálya. Impaktált fog esetében viszont egyértelműen meghatározható a fog visszamaradásának oka (helyhiány, gyulladás, számfeletti fog, stb). Impaktáltnak azokat a fogakat tekintjük, amelyek az állcsontban maradnak az elvárt áttörési életkort követő két éven túl is.</p>
-                    
-                    <div class="my-10 bg-white p-8 rounded-2xl border border-gray-100">
-                        <h4 class="font-semibold mb-6 text-[#0A2540]">Mikor érdemes orvoshoz fordulni?</h4>
-                        <ul class="space-y-4 text-sm">
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
-                            <li class="flex gap-3 mt-8"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Krónikus gyulladásos betegségek esetén</li>
-                            <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i>Artikulációs és táplálkozási nehézségek esetén</li>
-                        </ul>
-                    </div>
-                    
-                    <p><strong>Keressen minket bizalommal</strong> állcsontortopédiai konzultáció céljából a Kapcsolat menüpontban található elérhetőségeken keresztül!</p>
-                </div>
+                
+                <p><strong>Keressen minket bizalommal</strong> állcsontortopédiai konzultáció céljából a Kapcsolat menüpontban található elérhetőségeken keresztül!</p>
             </div>
         </div>
     </section>
 
-    <!-- ORVOSAINK – FULL CVs + Marcell now .png -->
+    <!-- ORVOSAINK (unchanged – full CVs) -->
     <section id="orvosaink" class="max-w-6xl mx-auto px-6 py-24">
         <div class="text-center mb-16">
             <span class="text-[#60A5FA] uppercase text-sm font-semibold tracking-widest">SZAKEMBEREINK</span>
@@ -122,8 +179,7 @@
         </div>
         
         <div class="grid md:grid-cols-2 gap-12">
-            
-            <!-- DR ILLÉS EMIL – FULL CV -->
+            <!-- DR ILLÉS EMIL -->
             <div class="doctor-card bg-white rounded-3xl overflow-hidden shadow-xl">
                 <div class="bg-gray-100">
                     <img src="dr-emil.jpg" alt="Dr. Illés Emil" class="w-full h-auto object-cover">
@@ -131,7 +187,7 @@
                 <div class="p-10">
                     <h3 class="text-3xl font-bold text-[#0A2540]">Dr. Illés Emil</h3>
                     <p class="text-[#60A5FA] font-medium mb-6">Gyermek-dento-alveoláris sebész • Szakmai vezető</p>
-                    <div class="prose prose-base text-gray-700">
+                    <div class="prose prose-base text-gray-700 leading-relaxed">
                         <p>Fogorvosi diplomámat a Semmelweis Egyetem Fogorvostudományi Karán szereztem 2008-ban. Dento-alveoláris sebész szakvizsgámat 2011-ben szereztem a Veszprém Megyei Csolnoky Ferenc Kórház Arc-, Állcsont-, Szájsebészeti Osztályán.</p>
                         <p>2008 óta foglalkozom betegekkel fogorvosként, 2011 óta végzek az állcsontot érintő beavatkozásokat - implantáció, impaktált fogak eltávolítása, bölcsességfog-eltávolítás feltárásban, góckutatás – Veszprémben, Pápán, Budakeszin, Budapesten és külföldön.</p>
                         <p>2023 májusától ambuláns gyermek-szájsebészeti ellátást is végzek a Heim Pál Országos Gyermekgyógyászati Intézet Állcsont-orthopédiai és Fogszabályozási Osztályán: radixok, impaktált fogak és számfeletti fogak eltávolítása, az arcüreg zárása, a retineált fogak műtéti felszabadítása, frenulektómia.</p>
@@ -141,7 +197,7 @@
                 </div>
             </div>
             
-            <!-- DR FÖLDESI MARCELL – FULL CV + .png -->
+            <!-- DR FÖLDESI MARCELL -->
             <div class="doctor-card bg-white rounded-3xl overflow-hidden shadow-xl">
                 <div class="bg-gray-100">
                     <img src="dr-marcell.png" alt="Dr. Földesi Marcell" class="w-full h-auto object-cover">
@@ -149,7 +205,7 @@
                 <div class="p-10">
                     <h3 class="text-3xl font-bold text-[#0A2540]">Dr. Dr. Földesi Marcell</h3>
                     <p class="text-[#60A5FA] font-medium mb-6">Fogszabályozás szakorvos • Általános orvos</p>
-                    <div class="prose prose-base text-gray-700">
+                    <div class="prose prose-base text-gray-700 leading-relaxed">
                         <p>Fogorvosi diplomámat a Semmelweis Egyetem Fogorvostudományi Karán szereztem, ahol átfogó elméleti és gyakorlati képzésben részesültem. A képzés során kifejezett figyelem összpontosult a bizonyítékokon alapuló fogászati eljárások elsajátítására. Posztgraduális szakképzést fogszabályozás területén végeztem a Heim Pál Országos Gyermekgyógyászati Intézetben, ahol kiemelkedő szakmai tapasztalatot szereztem a gyermekek ellátásában. Rendszeresen részt veszek továbbképzéseken, hogy naprakész tudással szolgálhassam pácienseimet.</p>
                         <p>Munkám során rendkívül fontosnak tartom a páciensekkel való együttműködést és a közös, bizalmon alapuló munkát. Hiszem, hogy a sikeres kezelés kulcsa az orvos és a páciens aktív partnersége, különösen a hosszabb fogszabályozó kezelések esetében. Nagy hangsúlyt fektetek a részletes tájékoztatásra és arra, hogy pácienseim értsék és elfogadják a kezelési lépéseket. Célom, hogy a közös munka eredményeként tartós, egészséges és esztétikus mosolyt érjünk el.</p>
                         <p>Nagyon fontosnak tartom a fogazati és állcsonti eltérések korai felismerését, mert időben megkezdett kezeléssel sok esetben megelőzhetők a későbbi, összetettebb problémák. A fiatal páciensek ellátása során nagy hangsúlyt fektetek a bizalom kialakítására és a kíméletes, életkorhoz igazított megoldásokra. Célom, hogy a gyermekek számára egészséges harapást és harmonikus mosolyt biztosítsak, amely felnőttkorukban is tartós marad.</p>
@@ -166,9 +222,85 @@
         </div>
     </section>
 
-    <!-- KAPCSOLAT & FOOTER (unchanged) -->
-    <!-- (same as previous version – contact details, etc.) -->
-    <!-- ... (I kept it identical so you only need to copy the whole file) -->
+    <!-- KAPCSOLAT (unchanged) -->
+    <section id="kapcsolat" class="bg-[#0A2540] text-white py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-bold section-title mb-10">Lépjen velünk kapcsolatba</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-location-dot text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Cím</div>
+                                <div class="text-gray-300">1122 Budapest, Városmajor utca 47/B.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-phone text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Telefon</div>
+                                <a href="tel:+36xxxxxxxxx" class="text-gray-300 hover:text-[#60A5FA]">xx xx xxx xxxx</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-envelope text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">E-mail</div>
+                                <a href="mailto:varosmajorfogszabalyozas@gmail.com" class="block text-gray-300 hover:text-[#60A5FA]">varosmajorfogszabalyozas@gmail.com</a>
+                                <a href="mailto:info@varosmajorfogszabalyozas.hu" class="block text-gray-300 hover:text-[#60A5FA]">info@varosmajorfogszabalyozas.hu</a>
+                                <a href="mailto:info@allcsont-ortopedia.hu" class="block text-gray-300 hover:text-[#60A5FA]">info@allcsont-ortopedia.hu</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-clock text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Rendelési idő</div>
+                                <div class="text-gray-300">Hétfő: 8:00–12:00<br>Csütörtök: 16:00–19:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-10">
+                    <h3 class="text-2xl font-semibold mb-8">Gyors bejelentkezés</h3>
+                    <p class="mb-8 text-gray-300">Kérjük, írjon nekünk e-mailt vagy hívjon minket a fenti elérhetőségeken. Szakértő csapatunk hamarosan felveszi Önnel a kapcsolatot!</p>
+                    
+                    <a href="mailto:varosmajorfogszabalyozas@gmail.com" 
+                       class="block w-full bg-[#60A5FA] text-center py-5 rounded-2xl font-semibold text-lg hover:bg-[#3B82F6] transition">
+                        ÍRJON NEKÜNK E-MAILT →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- FOOTER (unchanged) -->
+    <footer class="bg-[#0A2540] text-white/70 py-12 text-sm">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 mb-8">
+                <i class="fa-solid fa-tooth text-4xl text-[#60A5FA]/30"></i>
+            </div>
+            <p class="mb-2">© 2026 Városmajori Fogszabályozás • Minden jog fenntartva</p>
+            <p class="text-xs">1122 Budapest, Városmajor utca 47/B. • Orvosi rendelő</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
