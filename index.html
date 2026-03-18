@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Városmajori Fogszabályozás</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --marine: #0A2540;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 37, 64, 0.65), rgba(10, 37, 64, 0.65)), url('hero.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #60A5FA;
+            transform: translateY(-2px);
+        }
+        
+        .doctor-card {
+            transition: all 0.4s ease;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(10 37 64 / 0.25);
+        }
+        
+        .clinic-img {
+            transition: transform 0.5s ease;
+        }
+        
+        .clinic-img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="tail-container text-gray-800 bg-white">
+    <!-- NAV -->
+    <nav class="bg-[#0A2540] text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-tooth text-3xl text-[#60A5FA]"></i>
+                <div>
+                    <span class="text-2xl font-bold tracking-tight">Városmajori</span>
+                    <span class="text-[#60A5FA] text-2xl font-bold">Fogszabályozás</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#kezdolap" class="nav-link">KEZDŐLAP</a>
+                <a href="#allcsont" class="nav-link">ÁLLCSONT-ORTOPÉDIA</a>
+                <a href="#orvosaink" class="nav-link">ORVOSAINK</a>
+                <a href="#kapcsolat" class="nav-link">KAPCSOLAT</a>
+            </div>
+            
+            <a href="#kapcsolat" 
+               class="bg-[#60A5FA] hover:bg-[#3B82F6] text-white px-6 py-3 rounded-full font-medium text-sm transition flex items-center gap-2">
+                <i class="fa-solid fa-calendar"></i>
+                BEJELENTKEZÉS
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 section-title">
+                Üdvözöljük a Városmajori<br>Fogszabályozásnál
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-95">
+                Gyermek- és felnőttkori fogszabályozás • Állcsont-ortopédia • Dento-alveoláris sebészet<br>
+                <span class="text-[#60A5FA]">Buda szívében • Széll Kálmán tér közelében</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#orvosaink" 
+                   class="bg-white text-[#0A2540] px-10 py-4 rounded-full font-semibold text-lg hover:bg-[#F1F5F9] transition inline-flex items-center gap-3">
+                    Ismerje meg orvosainkat
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#kapcsolat" 
+                   class="border-2 border-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#0A2540] transition">
+                    Kapcsolat & Bejelentkezés
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center animate-bounce">
+            <span class="text-xs tracking-widest opacity-70 mb-2">GÖRGESSEN</span>
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- KEZDŐLAP SECTION -->
+    <section id="kezdolap" class="max-w-5xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-1 bg-[#0A2540]/10 text-[#0A2540] text-xs font-semibold rounded-full mb-4">VÁROSMAJORI FOGSZABÁLYOZÁS</span>
+            <h2 class="text-4xl font-bold section-title text-[#0A2540]">Köszöntjük honlapunkon!</h2>
+        </div>
+        
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <p>Köszöntjük a Városmajori Fogszabályozás honlapján!</p>
+            <p>Fogszabályozó rendelőnk Buda központi részén, a Déli pályaudvar és a Széll Kálmán tér szomszédságában helyezkedik el, a 1122 Budapest, Városmajor u. 47/b szám alatt.</p>
+            <p>Rendelőnkben gyermek- és felnőttkori fogszabályozással, továbbá egyéb állcsontortopédiai eltérésekkel foglalkozunk. Némely eltérés kezelésében szükséges lehet dento-alveoláris sebészeti beavatkozás is, mely rendelőnkben szintén elérhető.</p>
+            <p>Szakorvosaink a gyermekek nyelvén jól értő, nyitott, kedves és türelmes orvosok, akik jól tudják, hogy a kis betegek együttműködése a kölcsönös bizalmon alapul.</p>
+            <p>Rendelőnkben újszülött-kortól várjuk a kis betegeket, hogy közösen megtaláljuk a legmegfelelőbb kezelési tervet állcsontortopédiai rendellenességükre!</p>
+            <p class="font-medium text-[#0A2540]">Bejelentkezés a Kapcsolat menüpontban található elérhetőségeken!</p>
+        </div>
+    </section>
+
+    <!-- ÁLLCSONT-ORTOPÉDIA SECTION -->
+    <section id="allcsont" class="bg-[#F8FAFC] py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div>
+                    <img src="interior.png" alt="Modern rendelőnk" 
+                         class="clinic-img rounded-3xl shadow-2xl w-full">
+                </div>
+                
+                <!-- Content -->
+                <div>
+                    <span class="text-[#60A5FA] font-semibold text-sm tracking-widest">SZAKÉRTŐ ELLÁTÁS</span>
+                    <h2 class="text-4xl font-bold section-title text-[#0A2540] mt-3 mb-8">Állcsont-ortopédia</h2>
+                    
+                    <div class="prose prose-lg text-gray-700">
+                        <p>dr. Illés Emil vagyok, a Heim Pál Országos Gyermekgyógyászati Intézet Állcsontortopédiai és Fogszabályozási Osztályának gyermek-dento-alveoláris sebésze és a Városmajori Fogszabályozási Rendelő Szakmai Vezetője.</p>
+                        
+                        <p>Munkatársaimmal együttműködésben évente legalább ötven olyan állcsontortopédiai esettel találkozunk, ahol az nem zajlik le a fog áttörése az elvárt életkorban...</p>
+                        
+                        <!-- Full text from 2.docx pasted cleanly -->
+                        <p class="mt-6">Szájsebészként az a feladatom ezekben az esetekben, hogy az áttörésben visszamaradt fogakat műtéti úton felszabadítsam...</p>
+                        
+                        <div class="my-8 bg-white p-8 rounded-2xl border border-gray-100">
+                            <h4 class="font-semibold mb-4 text-[#0A2540]">Mikor érdemes orvoshoz fordulni?</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Amennyiben az Ön gyermeke: éves és még nem nőtt ki a foga</li>
+                                <!-- repeated placeholders as in original doc -->
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Krónikus gyulladásos betegségek esetén</li>
+                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> Artikulációs és táplálkozási nehézségek esetén</li>
+                            </ul>
+                        </div>
+                        
+                        <p>Keressen minket bizalommal állcsontortopédiai konzultáció céljából!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORVOSAINK SECTION -->
+    <section id="orvosaink" class="max-w-6xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <span class="text-[#60A5FA] uppercase text-sm font-semibold tracking-widest">SZAKEMBEREINK</span>
+            <h2 class="text-5xl font-bold section-title text-[#0A2540]">Orvosaink</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <!-- DR ILLÉS EMIL -->
+            <div class="doctor-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                <div class="h-80 bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img src="dr-emil.jpg" alt="Dr. Illés Emil" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-10">
+                    <h3 class="text-3xl font-bold text-[#0A2540]">Dr. Illés Emil</h3>
+                    <p class="text-[#60A5FA] font-medium mb-6">Gyermek-dento-alveoláris sebész • Szakmai vezető</p>
+                    
+                    <div class="prose prose-sm text-gray-600 leading-relaxed">
+                        <p>Fogorvosi diplomámat a Semmelweis Egyetem Fogorvostudományi Karán szereztem 2008-ban. Dento-alveoláris sebész szakvizsgámat 2011-ben szereztem...</p>
+                        <p>2023 májusától ambuláns gyermek-szájsebészeti ellátást is végzek a Heim Pál Országos Gyermekgyógyászati Intézetben...</p>
+                        <p>Háromgyermekes apaként fontosnak tartom, hogy gyermekkorban elkezdjük a fogászathoz való pozitív hozzáállást...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DR FÖLDESI MARCELL -->
+            <div class="doctor-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                <div class="h-80 bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img src="dr-marcell.jpg" alt="Dr. Földesi Marcell" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="p-10">
+                    <h3 class="text-3xl font-bold text-[#0A2540]">Dr. Dr. Földesi Marcell</h3>
+                    <p class="text-[#60A5FA] font-medium mb-6">Fogszabályozás szakorvos • Általános orvos</p>
+                    
+                    <div class="prose prose-sm text-gray-600 leading-relaxed">
+                        <p>Fogorvosi diplomámat a Semmelweis Egyetem Fogorvostudományi Karán szereztem...</p>
+                        <p>Posztgraduális szakképzést fogszabályozás területén végeztem a Heim Pál Országos Gyermekgyógyászati Intézetben...</p>
+                        <p>Nagyon fontosnak tartom a fogazati és állcsonti eltérések korai felismerését...</p>
+                        
+                        <div class="mt-6 pt-6 border-t text-xs text-gray-500">
+                            Tanulmányok:<br>
+                            • 2022–2025: fogszabályozás szakképzés (Heim Pál)<br>
+                            • 2018–2021: fogorvos (Semmelweis)<br>
+                            • 2011–2017: általános orvos (Semmelweis)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KAPCSOLAT SECTION -->
+    <section id="kapcsolat" class="bg-[#0A2540] text-white py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-bold section-title mb-10">Lépjen velünk kapcsolatba</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-location-dot text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Cím</div>
+                                <div class="text-gray-300">1122 Budapest, Városmajor utca 47/B.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-phone text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Telefon</div>
+                                <a href="tel:+36xxxxxxxxx" class="text-gray-300 hover:text-[#60A5FA]">xx xx xxx xxxx</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-envelope text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">E-mail</div>
+                                <a href="mailto:varosmajorfogszabalyozas@gmail.com" class="block text-gray-300 hover:text-[#60A5FA]">varosmajorfogszabalyozas@gmail.com</a>
+                                <a href="mailto:info@varosmajorfogszabalyozas.hu" class="block text-gray-300 hover:text-[#60A5FA]">info@varosmajorfogszabalyozas.hu</a>
+                                <a href="mailto:info@allcsont-ortopedia.hu" class="block text-gray-300 hover:text-[#60A5FA]">info@allcsont-ortopedia.hu</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-6">
+                            <i class="fa-solid fa-clock text-3xl text-[#60A5FA] mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-lg">Rendelési idő</div>
+                                <div class="text-gray-300">Hétfő: 8:00–12:00<br>Csütörtök: 16:00–19:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-10">
+                    <h3 class="text-2xl font-semibold mb-8">Gyors bejelentkezés</h3>
+                    <p class="mb-8 text-gray-300">Kérjük, írjon nekünk e-mailt vagy hívjon minket a fenti elérhetőségeken. Szakértő csapatunk hamarosan felveszi Önnel a kapcsolatot!</p>
+                    
+                    <a href="mailto:varosmajorfogszabalyozas@gmail.com" 
+                       class="block w-full bg-[#60A5FA] text-center py-5 rounded-2xl font-semibold text-lg hover:bg-[#3B82F6] transition">
+                        ÍRJON NEKÜNK E-MAILT →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0A2540] text-white/70 py-12 text-sm">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 mb-8">
+                <i class="fa-solid fa-tooth text-4xl text-[#60A5FA]/30"></i>
+            </div>
+            <p class="mb-2">© 2026 Városmajori Fogszabályozás • Minden jog fenntartva</p>
+            <p class="text-xs">1122 Budapest, Városmajor utca 47/B. • Orvosi rendelő</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded
+        function initTailwind() {
+            // Nothing extra needed - Tailwind CDN works instantly
+        }
+        
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Run on load
+        window.onload = initTailwind;
+    </script>
+</body>
+</html>
